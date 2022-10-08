@@ -1,0 +1,117 @@
+.loginregisterpage {
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+}
+
+.registerpage {
+    color: black;
+    background-size: cover;
+    background-image: url(../img/flag-36423_960_720.png)
+}
+
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+ol li {
+    list-style: none;
+}
+
+.male-header {
+    background-color: #FF74B1;
+    color: antiquewhite;
+    padding: 20px;
+    height: 120px;
+    text-align: center;
+}
+
+.male-main {
+    margin-top: 1rem;
+    background-color: #FFD6EC;
+    padding: 20px;
+    text-align: center;
+}
+
+.male-navbar {
+    background-color: #FF74B1;
+    color: antiquewhite;
+}
+
+.female-header {
+    background-color: #06283D;
+    color: antiquewhite;
+    padding: 20px;
+    height: 120px;
+    text-align: center;
+}
+
+.female-main {
+    margin-top: 1rem;
+    background-color: #47B5FF;
+    padding: 20px;
+    text-align: center;
+}
+
+.female-navbar {
+    background-color: #06283D;
+    color: antiquewhite;
+}
+
+.other-header {
+    background-image: url(../img/flag-36423_960_720.png);
+    color: antiquewhite;
+    padding: 20px;
+    height: 120px;
+    text-align: center;
+}
+
+.other-main {
+    margin-top: 1rem;
+    background-image: url(../img/flag-36423_960_720.png);
+    padding: 20px;
+    text-align: center;
+}
+
+.other-navbar {
+    background-color: rgb(228, 148, 220);
+    color: antiquewhite;
+}
+
+.items {
+
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.item {
+    padding: 2rem;
+    margin: 2rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.26);
+    border-radius: 25px;
+    width: 18rem;
+    box-shadow: #3d5468 5px 3px 15px 3px;
+}
+
+.itemImage {
+    margin-bottom: 2rem;
+}
+
+.itemImage img {
+
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+
+}
+
+.itemImage:hover {
+    transform: scale(2);
+    transition: 1s;
+    opacity: 0.8;
+
+}

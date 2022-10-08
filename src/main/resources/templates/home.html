@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div th:class="${gender} + '-header' + ' row'"> <!-- ${gender} + 'header' -->
+        <h1 th:text="${model.header}"></h1>
+        <h6 th:text="${user.name} + ' ' + ${user.surname}"></h6>
+
+    </div>
+
+    <div th:class="${gender} + '-main' + ' row'">
+        <div th:class="${gender} + '-navbar' + ' col-md-2'">
+            <h3>Category</h3>
+            <ol>
+                <li th:each="item, index :${model.categoryList}">
+                    <label th:text="${item}"></label>
+                </li>
+            </ol>
+        </div>
+
+        <div class="col-md-10">
+            <div class="row d-flex justify-content-center">
+                <div th:each="product: ${model.productList}" class="item card col-3 d-flex justify-content-around align-items-center">
+                    <img th:src="${product.image}" class="itemImage card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 th:text="${product.brand}" class="card-title"></h5>
+                        <h6 th:text="${product.model}" class="card-title"></h6>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li th:text="'Price: ' + ${product.price} + ' TL'" class="list-group-item"></li>
+
+                    </ul>
+                    <div class="card-body">
+<!--                        <a href="#" class="card-link">Card link</a>-->
+<!--                        <a href="#" class="card-link">Another link</a>-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- ${gender} + 'main' -->
+
+</div>
+
+</body>
+</html>
